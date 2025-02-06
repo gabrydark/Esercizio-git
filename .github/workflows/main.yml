@@ -12,12 +12,12 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.DOCKERE_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
           
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USARENAME_gabrydark18 }}/my-app:latest .
+        run: docker build -t ${{ secrets.DOCKERE_USERNAME}}/my-app:latest .
       
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USARENAME_gabrydark18 }}/my-app:latest
+        run: docker push ${{ secrets.DOCKERE_USERNAME}}/my-app:latest
 
